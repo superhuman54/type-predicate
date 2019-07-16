@@ -1,0 +1,14 @@
+{
+  "name": "type-predicate",
+  "version": "0.0.1",
+  "description": "predicate for TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "lib"
+  ],
+  "author": "Kim Kihwan",
+  "license": "ISC"
+}
