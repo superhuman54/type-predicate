@@ -4,11 +4,33 @@
   "description": "predicate for TypeScript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "npx rimraf lib && npx rimraf coverage",
+    "format": "$(npm bin)/prettier --write \"{src,__tests__}/**/*.ts\" --single-quote --trailing-comma es5"
   },
   "files": [
     "lib"
   ],
   "author": "Kim Kihwan",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^24.0.15",
+    "@types/node": "^12.6.3",
+    "prettier": "^1.18.2",
+    "rimraf": "^2.6.3",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {},
+  "jest": {
+    "transform": {
+      ".(ts)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "testEnvironment": "node"
+  }
 }

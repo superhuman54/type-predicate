@@ -1,5 +1,3 @@
-
-
 export abstract class Predicate<T> {
 
     abstract matches(a: T): boolean;
